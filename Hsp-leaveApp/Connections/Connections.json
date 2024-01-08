@@ -1,0 +1,43 @@
+{
+  "0037e8b1-db76-400a-8407-eda60eed609f": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read",
+      "providers/PowerPlatform.Governance/Operations/Write"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1670/1.0.1670.3526/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://cronicsm.sharepoint.com/sites/Hospital": {
+        "dataSources": {
+          "credentials": {
+            "tableName": "365dd75b-08b4-491f-bb4f-515fbcb6aec9"
+          },
+          "Leave Application": {
+            "tableName": "2713bae0-870d-4b9f-b334-64e329404e5e"
+          },
+          "manager": {
+            "tableName": "1ec9fe59-4386-4c6a-a30b-d0bdb04a2bed"
+          },
+          "User name password": {
+            "tableName": "bde4244c-ca9a-4431-bd81-39589f06eb1e"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Leave Application",
+      "User name password",
+      "manager",
+      "credentials"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "0037e8b1-db76-400a-8407-eda60eed609f"
+  }
+}

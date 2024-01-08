@@ -1,0 +1,114 @@
+loginscr As screen:
+
+    Rectangle4 As rectangle:
+        Height: =535
+        Width: =995
+        X: =167
+        Y: =165
+        ZIndex: =1
+
+    rechome_1 As rectangle:
+        Height: =112
+        Width: =1366
+        ZIndex: =2
+
+    Image1_1 As image:
+        Image: =aissms
+        ImagePosition: =ImagePosition.Stretch
+        Width: =317
+        Y: =6
+        ZIndex: =3
+
+    lblheadding_1 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =112
+        Size: =25
+        Text: ="Cronics-HSP-LEave App"
+        Width: =406
+        X: =405
+        ZIndex: =4
+
+    Label2_1 As label:
+        Height: =55
+        Size: =25
+        Text: ="Welcome " & User().FullName 
+        Width: =507
+        X: =823
+        Y: =6
+        ZIndex: =5
+
+    Label5 As label:
+        Height: =82
+        Size: =25
+        Text: ="Log In"
+        Width: =187
+        X: =218
+        Y: =236
+        ZIndex: =6
+
+    Label6 As label:
+        Height: =67
+        Size: =25
+        Text: ="Password"
+        Width: =187
+        X: =218
+        Y: =369
+        ZIndex: =7
+
+    btnlogin As button:
+        Fill: =RGBA(9, 33, 98, 1)
+        OnSelect: =If(!IsBlank(LookUp('User name password',name=txtlogin.Text && Password=txtpass.Text).Title),Navigate(homescr),Set(varcontactadmin,true))
+        Text: ="Log In "
+        X: =842
+        Y: =502
+        ZIndex: =8
+
+    txtlogin As text:
+        Default: =""
+        Height: =77
+        Size: =25
+        Width: =460
+        X: =405
+        Y: =238
+        ZIndex: =9
+
+    txtpass As text:
+        Default: =""
+        Height: =77
+        Size: =25
+        Width: =460
+        X: =405
+        Y: =370
+        ZIndex: =10
+
+    Button9 As button:
+        OnSelect: =Navigate(Screen3,ScreenTransition.Fade);
+        Text: ="Button"
+        X: =45
+        Y: =462
+        ZIndex: =11
+
+    Label3 As label:
+        Text: =User().Email
+        Width: =543
+        X: =823
+        Y: =48
+        ZIndex: =12
+
+    Image3 As image:
+        Height: =94
+        Image: =User().Image
+        X: =1266
+        Y: =6
+        ZIndex: =13
+
+    Label9_1 As label:
+        DisabledBorderColor: =RGBA(168, 0, 0, 1)
+        Text: ="contact Admin"
+        Visible: =varcontactadmin
+        Width: =242
+        X: =448
+        Y: =462
+        ZIndex: =14
+

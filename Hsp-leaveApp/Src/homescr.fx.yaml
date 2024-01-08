@@ -1,0 +1,76 @@
+homescr As screen:
+
+    Rectangle1 As rectangle:
+        Fill: =RGBA(215, 223, 240, 1)
+        Height: =550
+        Width: =1130
+        X: =118
+        Y: =112
+        ZIndex: =1
+
+    rechome As rectangle:
+        Height: =112
+        Width: =1366
+        ZIndex: =2
+
+    btnleaveform As button:
+        Height: =120
+        OnSelect: =Navigate(form)
+        Text: ="Leave application Form"
+        Width: =227
+        X: =216
+        Y: =176
+        ZIndex: =3
+
+    btnmyleave As button:
+        Height: =120
+        OnSelect: =Navigate(leaveform)
+        Text: ="my leaves"
+        Width: =227
+        X: =786
+        Y: =176
+        ZIndex: =4
+
+    btnassignleave As button:
+        Height: =120
+        OnSelect: =Navigate(scrassleaves)
+        Text: ="My Assigned Leaves"
+        Visible: =If(User().Email="Arfat@cronicsm.onmicrosoft.com",true,false)
+        Width: =227
+        X: =216
+        Y: =471
+        ZIndex: =5
+
+    Image1 As image:
+        Image: =aissms
+        ImagePosition: =ImagePosition.Stretch
+        Y: =6
+        ZIndex: =6
+
+    lblheadding As label:
+        FontWeight: =FontWeight.Bold
+        Height: =112
+        Size: =25
+        Text: ="Cronics-HSP-LEave App"
+        Width: =406
+        X: =118
+        ZIndex: =7
+
+    Label2 As label:
+        Height: =100
+        Size: =30
+        Text: ="Welcome "& User().FullName
+        Width: =390
+        X: =804
+        Y: =6
+        ZIndex: =8
+
+    Icon2 As icon.Leave:
+        Height: =100
+        Icon: =Icon.Leave
+        OnSelect: =Navigate(loginscr,ScreenTransition.Cover)
+        Width: =99
+        X: =1267
+        Y: =6
+        ZIndex: =9
+

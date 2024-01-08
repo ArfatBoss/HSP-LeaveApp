@@ -1,0 +1,73 @@
+Screen3 As screen:
+    Fill: =
+    OnVisible: |-
+        =Set(varcontactadmin,false);
+        Set(varpassword,TextMode.Password)
+
+    Container1 As groupContainer.manualLayoutContainer:
+        Height: =572
+        Width: =695
+        X: =326
+        Y: =80
+        ZIndex: =1
+
+        pass As text:
+            Default: ="Text input"
+            Mode: =varpassword
+            OnSelect: =true
+            X: =160
+            Y: =190
+            ZIndex: =1
+
+        login As text:
+            Default: ="Text input"
+            X: =160
+            Y: =86
+            ZIndex: =2
+
+        Label9 As label:
+            Text: ="contact Admin"
+            Visible: =varcontactadmin
+            X: =196
+            Y: =282
+            ZIndex: =3
+
+        Button8 As button:
+            OnSelect: =If(!IsBlank(LookUp(credentials,credname=login.Text && password=pass.Text).Title),Navigate(homescr,ScreenTransition.CoverRight),Set(varcontactadmin,true))
+            Text: ="Button"
+            X: =196
+            Y: =432
+            ZIndex: =4
+
+        Icon8 As icon.AddUser:
+            Icon: =Icon.AddUser
+            X: =62
+            Y: =74
+            ZIndex: =5
+
+        Icon9 As icon.Unlock:
+            Icon: =Icon.Unlock
+            X: =62
+            Y: =178
+            ZIndex: =6
+
+        Icon10 As icon.View:
+            Icon: =Icon.View
+            OnSelect: |+
+                =Set(
+                    varpassword,
+                    TextMode.SingleLine
+                );
+                
+            X: =416
+            Y: =178
+            ZIndex: =7
+
+        Icon5 As icon.Hide:
+            Icon: =Icon.Hide
+            OnSelect: |
+                =Set(varpassword,TextMode.Password);
+            X: =432
+            Y: =270
+            ZIndex: =8
+
