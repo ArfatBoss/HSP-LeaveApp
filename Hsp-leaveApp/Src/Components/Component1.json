@@ -45,7 +45,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "Component1",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 142,
+        "PublishOrderIndex": 2,
         "Rules": [
           {
             "Category": "Design",
@@ -219,7 +219,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "Component1",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 143,
+        "PublishOrderIndex": 3,
         "Rules": [
           {
             "Category": "Data",
@@ -488,7 +488,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "638403027004443685",
+    "LastModifiedTimestamp": "638403031668975382",
     "Name": "Component1",
     "Rules": [
       {
@@ -547,7 +547,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638403027004443685",
+  "LastModifiedTimestamp": "638403031668975382",
   "Name": "ec128843f68a4ec6ab8f62acb10e6e53",
   "OverridableProperties": {},
   "Version": "638276922259241547"
